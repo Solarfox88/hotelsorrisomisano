@@ -8,12 +8,22 @@
 $cicciopark_desc = get_theme_mod( 'cicciopark_description', 'Ad 1km dall\'hotel esiste un parco giochi interamente dedicato ai piu piccoli... il Ciccio Park! Piu di 2000mq per il divertimento di tutti i bambini con gonfiabili, animazione tutte le sere, spettacoli, cabaret e musical... il regno delle famiglie in vacanza!' );
 $cicciopark_note = get_theme_mod( 'cicciopark_note', 'L\'ingresso al parco e in omaggio tutte le sere, per tutta la famiglia, con il pacchetto All Inclusive!' );
 
+$default_cicciopark_images = array(
+	get_template_directory_uri() . '/assets/images/cicciopark.jpg',
+	get_template_directory_uri() . '/assets/images/cicciopark-2.jpg',
+);
+
 $cicciopark_images = array();
+$has_custom = false;
 for ( $i = 1; $i <= 6; $i++ ) {
 	$img = get_theme_mod( "cicciopark_image_{$i}", '' );
 	if ( $img ) {
 		$cicciopark_images[] = $img;
+		$has_custom = true;
 	}
+}
+if ( ! $has_custom ) {
+	$cicciopark_images = $default_cicciopark_images;
 }
 ?>
 

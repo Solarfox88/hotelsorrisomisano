@@ -7,12 +7,25 @@
 
 $bambini_desc = get_theme_mod( 'bambini_description', 'Servizi dedicati ai piu piccoli con animazione, giochi e divertimento per tutta la famiglia.' );
 
+$default_bambini_images = array(
+	get_template_directory_uri() . '/assets/images/bambini.jpg',
+	get_template_directory_uri() . '/assets/images/bambini-2.jpg',
+	get_template_directory_uri() . '/assets/images/bambini-3.jpg',
+	get_template_directory_uri() . '/assets/images/animazione.jpg',
+	get_template_directory_uri() . '/assets/images/animazione-2.jpg',
+);
+
 $bambini_images = array();
+$has_custom = false;
 for ( $i = 1; $i <= 6; $i++ ) {
 	$img = get_theme_mod( "bambini_image_{$i}", '' );
 	if ( $img ) {
 		$bambini_images[] = $img;
+		$has_custom = true;
 	}
+}
+if ( ! $has_custom ) {
+	$bambini_images = $default_bambini_images;
 }
 ?>
 

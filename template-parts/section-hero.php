@@ -9,7 +9,7 @@ $hero_title    = get_theme_mod( 'hero_title', 'La Tua Vacanza All Inclusive A Mi
 $hero_subtitle = get_theme_mod( 'hero_subtitle', 'Scopri il perfetto mix tra relax e divertimento per tutta la famiglia nella splendida Riviera Romagnola' );
 $hero_cta_text = get_theme_mod( 'hero_cta_text', 'Scopri le Offerte' );
 $hero_cta_link = get_theme_mod( 'hero_cta_link', '#offertemisano' );
-$hero_image    = get_theme_mod( 'hero_image', '' );
+$hero_image    = get_theme_mod( 'hero_image', get_template_directory_uri() . '/assets/images/hero-bg.jpg' );
 ?>
 
 <section class="hero" id="hero">

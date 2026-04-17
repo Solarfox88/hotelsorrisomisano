@@ -8,7 +8,7 @@
 $colazione    = get_theme_mod( 'ristorante_colazione', 'Colazione Internazionale a Buffet con uova strapazzate e Bacon, Affettati e formaggi, Croissant, Torte e Biscotti fatti in casa, Yogurt e Cereali, Confetture, Caffetteria espressa, Frutta sciroppata.' );
 $pranzo_cena  = get_theme_mod( 'ristorante_pranzo_cena', 'Buffet con Antipasti caldi, Antipasti freddi, Primi Piatti caldi e freddi di carne e di pesce, Secondi di carne e Pesce, Frutta fresca e dolci.' );
 $bevande      = get_theme_mod( 'ristorante_bevande', 'Dalla mattina fino a notte ed in ogni momento Acqua, Cola, Aranciata, The pesca, The Limone, Succhi di frutta.' );
-$rist_image   = get_theme_mod( 'ristorante_image', '' );
+$rist_image   = get_theme_mod( 'ristorante_image', get_template_directory_uri() . '/assets/images/ristorante.jpg' );
 ?>
 
 <section class="ristorante" id="ristorante">
@@ -45,11 +45,9 @@ $rist_image   = get_theme_mod( 'ristorante_image', '' );
 				</div>
 			</div>
 
-			<?php if ( $rist_image ) : ?>
 				<div class="ristorante__image" data-animate="fade-left">
-					<img src="<?php echo esc_url( $rist_image ); ?>" alt="Ristorante Hotel Sorriso" loading="lazy" width="600" height="800">
-				</div>
-			<?php endif; ?>
+				<img src="<?php echo esc_url( $rist_image ); ?>" alt="Ristorante Hotel Sorriso" loading="lazy" width="600" height="800">
+			</div>
 		</div>
 	</div>
 </section>

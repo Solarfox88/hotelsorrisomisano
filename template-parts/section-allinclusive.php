@@ -46,6 +46,9 @@ for ( $i = 1; $i <= 5; $i++ ) {
 		<div class="allinclusive__layout">
 			<div class="allinclusive__text" data-animate="fade-right">
 				<p class="allinclusive__desc"><?php echo wp_kses_post( $ai_desc ); ?></p>
+				<div class="allinclusive__image">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/piscina.jpg' ); ?>" alt="Piscina All Inclusive Hotel Sorriso" loading="lazy" width="600" height="400">
+				</div>
 			</div>
 
 			<div class="allinclusive__services" data-animate="fade-left">

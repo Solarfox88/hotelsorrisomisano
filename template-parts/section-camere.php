@@ -9,12 +9,24 @@ $rooms_description = get_theme_mod( 'rooms_description', 'Camere accoglienti e c
 $rooms_amenities   = get_theme_mod( 'rooms_amenities', "Cassaforte\nFrigobar su richiesta\nWifi\nPhon\nTv lcd 24''\nAria condizionata" );
 $amenities_list    = array_filter( array_map( 'trim', explode( "\n", $rooms_amenities ) ) );
 
+$default_room_images = array(
+	get_template_directory_uri() . '/assets/images/camera-1.jpg',
+	get_template_directory_uri() . '/assets/images/camera-2.jpg',
+	get_template_directory_uri() . '/assets/images/camera-3.jpg',
+	get_template_directory_uri() . '/assets/images/bagno.jpg',
+);
+
 $room_images = array();
+$has_custom = false;
 for ( $i = 1; $i <= 6; $i++ ) {
 	$img = get_theme_mod( "room_image_{$i}", '' );
 	if ( $img ) {
 		$room_images[] = $img;
+		$has_custom = true;
 	}
+}
+if ( ! $has_custom ) {
+	$room_images = $default_room_images;
 }
 ?>
 

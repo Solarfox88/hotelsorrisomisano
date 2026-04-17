@@ -666,11 +666,28 @@ body:not(.is-homepage) .site-header {
 	overflow: hidden;
 }
 
+.about__layout {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--space-3xl);
+	align-items: center;
+}
+
+.about__image {
+	border-radius: var(--radius-lg);
+	overflow: hidden;
+	box-shadow: var(--shadow-lg);
+}
+
+.about__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
 .about__content {
 	position: relative;
-	max-width: var(--container-narrow);
-	margin: 0 auto;
-	text-align: center;
 }
 
 .about__text p {
@@ -683,14 +700,6 @@ body:not(.is-homepage) .site-header {
 .about__closing {
 	font-size: 1.2rem;
 	color: var(--color-primary);
-}
-
-.about__decoration {
-	position: absolute;
-	right: -100px;
-	top: -50px;
-	opacity: 0.3;
-	pointer-events: none;
 }
 
 /* ============================================================
@@ -836,6 +845,20 @@ body:not(.is-homepage) .site-header {
 	font-size: 1.1rem;
 	line-height: 1.8;
 	color: var(--color-gray-700);
+	margin-bottom: var(--space-xl);
+}
+
+.allinclusive__image {
+	border-radius: var(--radius-lg);
+	overflow: hidden;
+	box-shadow: var(--shadow-lg);
+}
+
+.allinclusive__image img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
 }
 
 .allinclusive__services {
@@ -1839,6 +1862,26 @@ body:not(.is-homepage) .site-header {
 
 	.features__card {
 		padding: var(--space-xl);
+	}
+
+	/* Mobile about */
+	.about__layout {
+		grid-template-columns: 1fr;
+		gap: var(--space-xl);
+	}
+
+	.about__image {
+		max-height: 350px;
+	}
+
+	/* Mobile allinclusive */
+	.allinclusive__layout {
+		grid-template-columns: 1fr;
+	}
+
+	/* Mobile ristorante */
+	.ristorante__layout {
+		grid-template-columns: 1fr;
 	}
 
 	/* Mobile forms */

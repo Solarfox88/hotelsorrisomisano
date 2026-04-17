@@ -12,17 +12,16 @@ $about_closing = get_theme_mod( 'about_closing', 'Al tuo arrivo troverai esattam
 
 <section class="about" data-animate="fade-up">
 	<div class="container">
-		<div class="about__content">
-			<div class="about__text">
-				<p><?php echo wp_kses_post( $about_text ); ?></p>
-				<p><?php echo wp_kses_post( $about_text_2 ); ?></p>
-				<p class="about__closing"><strong><?php echo esc_html( $about_closing ); ?></strong></p>
+		<div class="about__layout">
+			<div class="about__image" data-animate="fade-right">
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/esterni.jpg' ); ?>" alt="Hotel Sorriso Misano Adriatico" loading="lazy" width="600" height="400">
 			</div>
-			<div class="about__decoration" aria-hidden="true">
-				<svg viewBox="0 0 200 200" width="200" height="200">
-					<path d="M100,10 Q190,100 100,190 Q10,100 100,10" fill="none" stroke="var(--color-gold)" stroke-width="1" opacity="0.3"/>
-					<path d="M100,30 Q170,100 100,170 Q30,100 100,30" fill="none" stroke="var(--color-gold)" stroke-width="1" opacity="0.2"/>
-				</svg>
+			<div class="about__content" data-animate="fade-left">
+				<div class="about__text">
+					<p><?php echo wp_kses_post( $about_text ); ?></p>
+					<p><?php echo wp_kses_post( $about_text_2 ); ?></p>
+					<p class="about__closing"><strong><?php echo esc_html( $about_closing ); ?></strong></p>
+				</div>
 			</div>
 		</div>
 	</div>
